@@ -192,7 +192,7 @@ if(document.getElementById("card-container").innerHTML==''){
     document.getElementById("card-container").innerHTML=`<h>no data found please try again</h>`
 }
 }
-book_data(url);
+// book_data(url);
 
 let add_items = JSON.parse(localStorage.getItem('add_items')) || [];
 card_number.innerText=add_items.length;
@@ -219,20 +219,26 @@ let find_datas=()=>{
 }
 
 
-
 let s_btn=document.getElementById("search_button");
 s_btn.addEventListener("click",(event)=>{
     event.preventDefault()
-search_key=document.getElementById("search_key").value;
-
-localStorage.setItem("key",search_key);
+    search_key=document.getElementById("search_key").value;
+    
+    localStorage.setItem("key",search_key);
 if(search_key==""){
     document.getElementById("search_key").classList.add("bg-danger");
     document.getElementById("search_key").placeholder="enter somthing"
 }
 else{
     document.getElementById("search_key").classList.remove("bg-danger");
-
+    
     find_datas();
 }
 })
+
+let fun=()=>{
+    key=localStorage.getItem("key");
+    let url=`https://openlibrary.org/search.json?q=${key}&fields=title,author_name,publisher,isbn&limit=20`;
+    book_data(url);
+}
+fun();
