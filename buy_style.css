@@ -1,0 +1,56 @@
+#login-icon{
+    font-size: 120%;
+  }
+  #like-icon{
+    font-size: 140%;
+    color:rgb(252, 15, 15);
+  }
+  #cart-icon{
+    font-size: 140%;
+  }
+  #sell-icon{
+    font-size: 120%;
+  }
+  #logout-icon{
+    font-size: 120%;
+  }
+  #signup-icon{
+    font-size: 120%;
+  }
+  
+  #login-word{
+    font-size: 120%;
+  }
+  #signup-word{
+    font-size: 120%;
+  }
+  #sell-word{
+    font-size: 120%;
+  }
+  #logout-word{
+    font-size: 120%;
+  }
+  
+  
+  .header-bar{
+      cursor: pointer;
+      padding:1.5px;
+      border:2px solid black;
+      border-radius: 5px;
+      text-decoration: none;
+      color:black
+  }
+  .header-bar:hover{
+     border:2px solid white;
+     border-radius: 3px;
+   
+  }
+  
+  .header-bar:hover{
+    border:2px solid white;
+    border-radius: 3px;
+  
+ }
+
+
+  
