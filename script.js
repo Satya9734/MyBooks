@@ -206,3 +206,11 @@ card_number.innerText=add_items.length;
 
 let like_items = JSON.parse(localStorage.getItem('like_items')) || [];
 like_number.innerText=like_items.length;
+
+let btn=document.getElementById("search_button")
+btn.addEventListener("click",(e)=>{
+    e.preventDefault();
+    let key=document.getElementById("search_key").value;
+localStorage.setItem("key",key);
+window.location.href = 'more.html';
+})
